@@ -1,6 +1,8 @@
 void main() {
-  Person obj = Person();
+  Student obj = Student();
   obj.displayInfo();
+  Teacher obj1 = Teacher();
+  obj1.age;
 }
 
 class Person {
@@ -17,6 +19,14 @@ class Person {
 // Inheritance means work of parent class call to the child class by using "extends" key word.
 // Inherit the Person class into the Student class.
 // Now the Person class is the parent class and the Student class is the child class.
-class Student extends Person {}
+// Now the child class access the parent class work.
+// The child class work not access into the parent class.
+class Student extends Person {
+  displayInfoStudent() {
+    print("Student");
+  }
+}
 
-class Teacher {}
+// This is show the multi-level Inheritance:
+//In that we extends Person class to the Student class and the Student class extends into the Teacher class.
+class Teacher extends Student {}
